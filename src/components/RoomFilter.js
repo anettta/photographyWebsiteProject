@@ -88,7 +88,7 @@ const RoomsFilter = ({ rooms }) => {
         </div>
         {/* end of room price*/}
         {/* size */}
-        <div className="form-group">
+        {/* <div className="form-group">
           <label htmlFor="size">print size </label>
           <div className="size-inputs">
             <input
@@ -106,7 +106,7 @@ const RoomsFilter = ({ rooms }) => {
               className="size-input"
             />
           </div>
-        </div>
+        </div> */}
         {/* end of select type */}
         {/* extras */}
         {/* <div className="form-group">
