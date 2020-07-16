@@ -8,8 +8,8 @@ Component {
         services: [
             {
                 icon:<FaLeaf/>,
-                title: "fine art photography",
-                info: 'Decorate your home with the beauty of natural environment'
+                title: "nature photography",
+                info: "The texture of a leaf, the morning dew, sound of waves or smell of the flower - one can recharge, feel better or/and discover a new trail or a beautiful scenery"
             }
             // },
            
