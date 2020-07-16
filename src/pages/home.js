@@ -12,7 +12,7 @@ export default function home() {
     <>
     <Hero>
         <Banner title="Anna G. photography" subtitle="Take a photo and just enjoy">
-            <Link to='/rooms' className="btn-primary">
+            <Link to='/gallery' className="btn-primary">
                 photographs
             </Link>
         </Banner>

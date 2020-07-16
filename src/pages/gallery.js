@@ -10,7 +10,7 @@ export default function rooms() {
        <Hero hero="roomsHero">
            <Banner title="Gallery">
                <Link to='/' className="btn-primary">
-                   return home
+                   return home 
                </Link>
            </Banner>
        </Hero>
