@@ -1,6 +1,6 @@
 import React from 'react';
 import Room from './Room';
-import { FaSearch } from 'react-icons/fa';
+// import { FaSearch } from 'react-icons/fa';
 
 export default function RoomList({rooms}) {
     if (rooms.length === 0) {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import {FaLeaf, FaBlackTie, FaPhotoVideo } from  'react-icons/fa'
-import Title from './Title';
+import {FaLeaf} from  'react-icons/fa'
+//FaBlackTie, FaPhotoVideo
+// import Title from './Title';
 export default class Services extends
 Component {
     state={

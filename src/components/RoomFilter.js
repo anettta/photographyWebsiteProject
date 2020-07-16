@@ -13,14 +13,14 @@ const RoomsFilter = ({ rooms }) => {
   const {
     handleChange,
     type,
-    capacity,
+    // capacity,
     price,
     minPrice,
     maxPrice,
     minSize,
     maxSize,
-    canvas,
-    availability
+    // canvas,
+    // availability
   } = context;
 
   // get unique types
@@ -34,12 +34,12 @@ const RoomsFilter = ({ rooms }) => {
     </option>
   ));
   // get unique capacity
-  let people = getUnique(rooms, "capacity");
-  people = people.map((item, index) => (
-    <option key={index} value={item}>
-      {item}
-    </option>
-  ));
+  // let people = getUnique(rooms, "capacity");
+  // people = people.map((item, index) => (
+  //   <option key={index} value={item}>
+  //     {item}
+  //   </option>
+  // ));
   return (
     <section className="filter-container">
       <Title title="search rooms" />
