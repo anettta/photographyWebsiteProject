@@ -36,7 +36,7 @@ export default class RoomProvider extends Component {
       let featuredRooms = rooms.filter(room => room.featured === true);
       //
       let maxPrice = Math.max(...rooms.map(item => item.price));
-      let maxSize = Math.max(...rooms.map(item => item.size));
+      // let maxSize = Math.max(...rooms.map(item => item.size));
       this.setState({
         rooms,
         featuredRooms,
@@ -44,8 +44,8 @@ export default class RoomProvider extends Component {
         loading: false,
         //
         price: maxPrice,
-        maxPrice,
-        maxSize
+        maxPrice
+        // maxSize
       });
     } catch (error) {
       console.log(error);
@@ -89,41 +89,41 @@ export default class RoomProvider extends Component {
     let {
       rooms,
       type,
-      capacity,
+      // capacity,
       price,
-      minSize,
-      maxSize,
-      canvas,
-      availability
+      // minSize,
+      // maxSize,
+      // canvas,
+      // availability
     } = this.state;
 
     let tempRooms = [...rooms];
     // transform values
     // get capacity
-    capacity = parseInt(capacity);
+    // capacity = parseInt(capacity);
     price = parseInt(price);
     // filter by type
     if (type !== "all") {
       tempRooms = tempRooms.filter(room => room.type === type);
     }
     // filter by capacity
-    if (capacity !== 1) {
-      tempRooms = tempRooms.filter(room => room.capacity >= capacity);
-    }
+    // if (capacity !== 1) {
+    //   tempRooms = tempRooms.filter(room => room.capacity >= capacity);
+    // }
     // filter by price
     tempRooms = tempRooms.filter(room => room.price <= price);
     //filter by size
-    tempRooms = tempRooms.filter(
-      room => room.size >= minSize && room.size <= maxSize
-    );
+    // tempRooms = tempRooms.filter(
+    //   room => room.size >= minSize && room.size <= maxSize
+    // );
     //filter by breakfast
-    if (canvas) {
-      tempRooms = tempRooms.filter(room => room.canvas === true);
-    }
+    // if (canvas) {
+    //   tempRooms = tempRooms.filter(room => room.canvas === true);
+    // }
     //filter by pets
-    if (availability) {
-      tempRooms = tempRooms.filter(room => room.availability === true);
-    }
+    // if (availability) {
+    //   tempRooms = tempRooms.filter(room => room.availability === true);
+    // }
     this.setState({
       sortedRooms: tempRooms
     });
