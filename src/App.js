@@ -9,6 +9,7 @@ import Error from './pages/error';
 import {Route, Switch} from "react-router-dom";
  
 import NavBar from "./components/NavBar";
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
 <Route component={Error} />
 
 </Switch>
+<Footer />
   </> 
 
   );

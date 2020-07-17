@@ -239,6 +239,7 @@ h6 {
 }
 /* end of Title */
 
+
 /* services */
 .services {
   padding: 5rem 0;
@@ -255,7 +256,7 @@ h6 {
   grid-row-gap: 2rem;
   grid-column-gap: 50px;
 }
-.service span {
+.service span a{
   display: inline-block;
   color: var(--primaryColor);
   font-size: 2.5rem;
