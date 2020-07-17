@@ -38,11 +38,11 @@ export default class SingleRoom extends Component {
           name,
           description,
           // capacity,
-          size,
+          // size,
           price,
           extras,
-          canvas,
-          availability,
+          // canvas,
+          // availability,
           images
         } = room;
         const [...defaultImages] = images;
@@ -71,18 +71,18 @@ export default class SingleRoom extends Component {
                 <article className="info">
                   <h3>info</h3>
                   <h6>price : ${price}</h6>
-                  <h6>size : {size} inches</h6>
+                  {/* <h6>size : {size} inches</h6> */}
                   {/* <h6>
                     max capacity :
                     {capacity > 1 ? `${capacity} people` : `${capacity} person`}
                   </h6> */}
-                  <h6>{availability ? "in stock" : "out of stock"}</h6>
-                  <h6>{canvas && "printed on canvas"}</h6>
+                  {/* <h6>{availability ? "in stock" : "out of stock"}</h6>
+                  <h6>{canvas && "printed on canvas"}</h6> */}
                 </article>
               </div>
             </section>
             <section className="room-extras">
-              <h6> Included with each print</h6>
+              <h6> Features </h6>
               <ul className="extras">
                 {extras.map((item, index) => (
                   <li key={index}>- {item}</li>
