@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import defaultBcg from '../images/galleryBcg.jpg';
+import defaultBcg from '../images/galleryBcg.jpf';
 // import Hero from '../components/Hero';
 import Banner from '../components/Banner';
 import {Link} from 'react-router-dom';

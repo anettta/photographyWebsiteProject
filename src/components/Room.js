@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import defaultImg from '../images/galleryBcg.jpg';
+import defaultImg from '../images/galleryBcg.jpf';
 import PropTypes from "prop-types";
 
 

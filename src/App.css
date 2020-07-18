@@ -170,13 +170,13 @@ h6 {
 .defaultHero,
 .roomsHero {
   min-height: calc(100vh - 66px);
-  background: url("./images/defaultBcg.jpeg") center/cover no-repeat;
+  background: url("./images/defaultBcg.jpf") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .roomsHero {
-  background-image: url("./images/galleryBcg.jpg");
+  background-image: url("./images/galleryBcg.jpf");
   min-height: 60vh;
 }
 /* End of Hero */
@@ -263,11 +263,11 @@ h6 {
   margin-bottom: 1.5rem;
 }
 
-.service span a{
-  display: inline-block;
+.service  a{
+  display: flex;
   color: var(--primaryColor);
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  font-size:1.5rem;
+  margin-bottom: 0.5rem;
 }
 .services h6 {
   letter-spacing: var(--mainSpacing);

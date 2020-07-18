@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import defaultImg from '../images/galleryBcg.jpg';
+import defaultImg from '../images/galleryBcg.jpf';
 
 const StyledHero = styled.header`
 min-height: 60vh;
