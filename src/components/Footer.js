@@ -15,10 +15,7 @@ Component {
                 icon: <a href="https://www.facebook.com/AfotoG" ><FaFacebook/> </a>
                 
             },
-            {
-                icon: <a href="www.pinterest.com/MoyiFoto" ><FaPinterest/> </a>
-
-            },
+      
             {
                 icon: <a href="https://github.com/anettta" ><FaGithub/> </a>
 
