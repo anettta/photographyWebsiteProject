@@ -26,7 +26,7 @@ Component {
     render() {
         return (
             <section className="services">
-               <Title title='Follow me on' />
+               <Title title='CONNECT' />
                <div className="services-center">
                    {this.state.footer.map((item, index) => {
                        return <article key={index} className="service">
