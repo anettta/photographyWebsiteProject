@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {FaInstagram, FaFacebook, FaPinterest, FaGithub} from  'react-icons/fa'
+import {FaInstagram, FaFacebook, FaGithub} from  'react-icons/fa'
 import Title from './Title';
 
 export default class Services extends
