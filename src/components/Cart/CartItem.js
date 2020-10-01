@@ -14,7 +14,7 @@ export default function CartItem({item,value}) {
                 src={images}
                 style={{width: "5rem", height: "5rem"}}
                 className="img-fluid"
-                alt=""
+                alt="chosen photograph"
                 />
             </div>
             <div className="col-10 mx-auto col-lg-2">
