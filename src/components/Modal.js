@@ -28,7 +28,7 @@ export default class Modal extends Component {
                                     
                                     <h5>{modalPhoto.name}</h5>
                                  
-                                    <img src={modalPhoto.images} className="img-in-modal-view"></img>
+                                    <img src={modalPhoto.images} className="img-in-modal-view" alt="photograph in cart"></img>
                                    
 
                                     <h5 className="text-muted">price: $ {modalPhoto.price}</h5>
