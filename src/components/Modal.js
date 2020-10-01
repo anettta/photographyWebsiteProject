@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from 'styled-components';
 import {RoomConsumer} from '../context';
 
-import {ButtonContainer} from '../components/Button';
+
 import { Link } from "react-router-dom";
 
 export default class Modal extends Component {
@@ -28,7 +28,7 @@ export default class Modal extends Component {
                                     
                                     <h5>{modalPhoto.name}</h5>
                                  
-                                    <img src={modalPhoto.images} className="img-in-modal-view" alt="photo"></img>
+                                    <img src={modalPhoto.images} className="img-in-modal-view"></img>
                                    
 
                                     <h5 className="text-muted">price: $ {modalPhoto.price}</h5>

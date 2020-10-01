@@ -3,7 +3,7 @@ import logo from '../images/logo.png'
 import {FaAlignRight} from 'react-icons/fa'
 import {FaLuggageCart} from 'react-icons/fa'
 import {Link} from 'react-router-dom'
-import styled from 'styled-components'
+
 import {ButtonContainer} from "./Button";
 
 export default class NavBar extends Component {
@@ -22,7 +22,7 @@ export default class NavBar extends Component {
                  
 {                    
                    <Link to="/">
-                       <img src={logo} alt="nature" />
+                       <img src={logo} />
                     
                         
                     
