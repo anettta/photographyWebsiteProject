@@ -22,14 +22,14 @@ export default class NavBar extends Component {
                  
 {                    
                    <Link to="/">
-                       <img src={logo} alt=""/>
+                       <img className="logo" src={logo} alt=""/>
                     
                         
                     
 </Link>}
                     
                     <button type="button" className="nav-btn" onClick={this.handleToggle}>
-                        <FaAlignRight className="nav--icon" />
+                        <FaAlignRight className="nav-icon" />
                        
                     </button>
                 </div>
