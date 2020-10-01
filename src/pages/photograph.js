@@ -4,7 +4,10 @@ import defaultBcg from '../images/galleryBcg.jpf';
 import Banner from '../components/Banner';
 import {Link} from 'react-router-dom';
 import {RoomContext} from '../context';
+import {RoomConsumer} from '../context';
+
 import StyledHero from '../components/StyledHero';
+import styled from "styled-components";
 
 export default class SingleRoom extends Component {
     constructor(props) {
@@ -26,6 +29,7 @@ export default class SingleRoom extends Component {
     
         if (!room) {
           return (
+           
             <div className="error">
               <h3> no such photo could be found...</h3>
               <Link to="/rooms" className="btn-primary">
@@ -34,6 +38,8 @@ export default class SingleRoom extends Component {
             </div>
           );
         }
+       
+       
         const {
           name,
           description,
@@ -43,10 +49,10 @@ export default class SingleRoom extends Component {
           extras,
           // canvas,
           // availability,
-          images
+          images, inCart
         } = room;
         const [...defaultImages] = images;
-        console.log(defaultImages);
+        //console.log(defaultImages);
     
         return (
           <>
@@ -78,6 +84,32 @@ export default class SingleRoom extends Component {
                   </h6> */}
                   {/* <h6>{availability ? "in stock" : "out of stock"}</h6>
                   <h6>{canvas && "printed on canvas"}</h6> */}
+                  <div>
+                    <div>
+                    <Link to='/'>
+                      <button className="btn-primary-detailed">
+                        Back to Gallery
+                      </button>
+                    </Link>
+                    </div>
+                    <div>
+                    <RoomConsumer>
+                    {(value)=> (
+                    <ButtonContainer className="btn-primary-detailed" 
+                    cart
+                    disabled={inCart?true:false} 
+                    onClick={()=>{
+                      value.addToCart(name);
+                      value.openModal(name);
+                      }}>
+                        {inCart ? "in cart" : "add to cart"}
+                      </ButtonContainer>)}
+                      </RoomConsumer>
+                      </div>
+                  </div>
+
+
+
                 </article>
               </div>
             </section>
@@ -90,7 +122,21 @@ export default class SingleRoom extends Component {
               </ul>
             </section>
           </>
+         
         );
+            
+        
       }
+      
     }
     
+  
+
+    export const ButtonContainer = styled.button`
+    background: ${props =>
+      props.cart ? "var(--mainComplementary)":"var(--mainPrimary)"};
+      &:hover {
+        color: ${props =>
+          props.cart ? "var(--mainComplementary)":"var(--mainPrimary)"};
+      }
+    `;

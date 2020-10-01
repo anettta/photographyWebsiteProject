@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import items from "./data";
+//import items from "./data";
 import Client from "./Contentful";
 Client.getEntries({
   content_type: "naturephotography"
@@ -22,7 +22,16 @@ export default class RoomProvider extends Component {
     minSize: 0,
     maxSize: 0,
     canvas: false,
-    availability: false
+    availability: false,
+    //inCart:false,
+    count:0,
+    total:0,
+    cart: [],
+    modalOpen: false,
+    cartSubTotal:0,
+    cartTax: 0,
+    cartTotal: 0
+    
   };
 
   getData = async () => {
@@ -42,6 +51,8 @@ export default class RoomProvider extends Component {
         featuredRooms,
         sortedRooms: rooms,
         loading: false,
+        modalPhoto:rooms,
+        inCart: false,
         //
         price: maxPrice,
         maxPrice
@@ -128,13 +139,133 @@ export default class RoomProvider extends Component {
       sortedRooms: tempRooms
     });
   };
+
+
+
+addToCart = (slug) => {
+  let tempItems = [...this.state.rooms];
+  const index = tempItems.indexOf(this.getRoom(slug));
+  const item = tempItems[index];
+  item.inCart = true;
+  item.count = 1;
+  const price = item.price;
+  item.total = price;
+  this.setState(()=>{
+    return {rooms:tempItems, cart:[...this.state.cart, item]}
+  },
+  () => {
+   this.addTotals();
+  }
+  );
+};
+
+openModal = (slug) => {
+  const item = this.getRoom(slug);
+  this.setState(()=>{
+    return {modalPhoto:item, modalOpen:true}
+  });
+};
+
+closeModal = () => {
+  this.setState(()=>{
+    return {modalOpen:false};
+  });
+};
+
+increment = (slug) => {
+  let tempCart = [...this.state.cart]; //now I have state values from the cart
+  const selectedPhoto = tempCart.find(item=>item.slug === slug);
+  const index = tempCart.indexOf(selectedPhoto);
+  const photo = tempCart[index]; //access to a specific photo
+  photo.count = photo.count + 1;
+  photo.total = photo.count * photo.price;
+   // ship back to the state 
+   this.setState(()=>{return{cart:[...tempCart]};},()=>{this.addTotals();}); // includes callback function
+};
+
+decrement = (slug) => {
+  let tempCart = [...this.state.cart]; //now I have state values from the cart
+  const selectedPhoto = tempCart.find(item=>item.slug === slug);
+  const index = tempCart.indexOf(selectedPhoto);
+  const photo = tempCart[index]; //access to a specific photo
+  photo.count = photo.count - 1;
+  if(photo.count === 0){
+    this.removeItem(slug);
+  }else {
+    photo.total = photo.count * photo.price;
+    this.setState(
+      ()=>{
+        return{cart:[...tempCart]};
+      },
+      ()=>{
+        this.addTotals();
+      });
+  }
+};
+
+removeItem = (slug) => {
+  let tempPhotos = [...this.state.rooms];
+  let tempCart = [...this.state.cart];
+
+  tempCart = tempCart.filter(item => item.slug !== slug);
+
+  const index = tempPhotos.indexOf(this.getRoom(slug));
+  let removedPhoto = tempPhotos[index];
+  removedPhoto.inCart = false;
+  removedPhoto.count = 0;
+  removedPhoto.total = 0;
+
+  this.setState(()=>{
+    return {
+      cart:[...tempCart],
+      rooms:[...tempPhotos]
+    }
+  },()=>{
+    this.addTotals();
+  });
+
+};
+
+clearCart = () => {
+  this.setState(()=>{
+    return {cart:[]};
+  }, ()=>{
+    this.getData();
+    this.addTotals();
+  });
+};
+
+addTotals = () => {
+  let subTotal = 0;
+  this.state.cart.map(item => (subTotal += item.total));
+  const tempTax = subTotal * 0.1; //10% tax
+  const tax = parseFloat(tempTax.toFixed(2));
+  const total = subTotal + tax;
+  this.setState(()=>{
+    return {
+      cartSubTotal:subTotal,
+      cartTax:tax,
+      cartTotal:total
+    }
+  })
+}
+
+
+
   render() {
     return (
       <RoomContext.Provider
-        value={{
+        value={{  // this is an object
           ...this.state,
           getRoom: this.getRoom,
-          handleChange: this.handleChange
+          handleChange: this.handleChange,
+          addToCart: this.addToCart,
+          openModal: this.openModal,
+          closeModal: this.closeModal,
+          increment: this.increment,
+          decrement: this.decrement,
+          removeItem: this.removeItem,
+          clearCart: this.clearCart
         }}
       >
         {this.props.children}

@@ -11,7 +11,7 @@ export default function home() {
     return (
     <>
     <Hero>
-        <Banner title="Anna G. photography" subtitle="Take a photo and just enjoy">
+        <Banner title="Nature photography" subtitle="Landscapes, Macro, Abstracts, Black and White by Anna G.">
             <Link to='/rooms' className="btn-primary">
                 photographs
             </Link>

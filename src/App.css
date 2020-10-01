@@ -10,6 +10,9 @@
   --mainBlack: #222;
   --mainGrey: #ececec;
   --darkGrey: #cfcfcf;
+  --mainComplementary: #7d92af;
+  --mainGreen: #7daf9a;
+  --mainPink: #af7d92;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 3px;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
@@ -65,10 +68,78 @@ h6 {
   text-transform: uppercase;
   cursor: pointer;
 }
+
+.btn-primary-detailed {
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainBlack);
+  background: var(--primaryColor);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--mainWhite);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+  justify-content: space-evenly;
+
+}
+
+.btn-primary-detailed-2 {
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainBlack);
+  background: var(--mainComplementary);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--mainWhite);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+  justify-content: space-evenly;
+
+}
+
+
 .btn-primary:hover {
   background: transparent;
   color: var(--primaryColor);
 }
+
+.btn-primary-detailed:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}
+
+.btn-primary-detailed-2:hover {
+  background: transparent;
+  color: var(--mainComplementary);
+}
+
+.cart-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.2rem 0.4rem;
+  background: var(--primaryColor);
+  border: none;
+  color: var(--mainBlack);
+  font-size: 1.4rem;
+  border-radius: 0.5rem 0 0 0;
+  transform: translate(100%, 100%);
+  transition: all 1s linear;
+}
+
+.img-container:hover .cart-btn {
+  transform: translate(0, 0);
+}
+
+.cart-btn:hover {
+  color: var(--mainWhite);
+  cursor: pointer;
+}
+
+
+
 .loading {
   text-transform: capitalize;
   text-align: center;
@@ -155,11 +226,12 @@ h6 {
     margin: 0 auto;
     display: flex;
   }
-  .nav-links {
+  .nav-links{
     height: auto;
     display: flex;
     margin-left: 4rem;
   }
+
   .nav-links a {
     margin: 0 1rem;
     padding: 0.5rem 0;
@@ -323,15 +395,43 @@ h6 {
 }
 .room:hover {
   box-shadow: var(--darkShadow);
+  transform: scale(1.2);
+  transition: all 1s linear;
 }
 
 .img-container {
   position: relative;
+  overflow: hidden;
 }
+
+.img-in-modal-view {
+  max-width: 100%;
+  width: 500px;
+ padding: 30px;
+}
+
+
+
+.confirm-modal-text {
+  color: var(--mainGreen);
+}
+
+.modal-view {
+  padding: 50px;
+  text-align: center;
+  text-transform: capitalize;
+  width: 700px;
+  box-shadow: var(--lightShadow);
+  transition: var(--mainTransition);
+
+}
+
 .img-container img {
   width: 100%;
   display: block;
   transition: var(--mainTransition);
+ 
+  
 }
 .price-top {
   position: absolute;
@@ -529,5 +629,109 @@ h6 {
     width: 95vw;
     max-width: 1170px;
   }
+  .d-lg-none {
+    display: none !important;
+  }
+  .d-sm-none {
+    display: none !important;
+  }
 }
 /* end of rooms fitler*/
+.btn-black {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  color: var(--mainBlack);
+  border-radius: 0 !important;
+  border: 0.1rem solid var(--mainBlack) !important;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 90px;
+}
+
+.btn-black:hover {
+  background: var(--mainBlack) !important;
+  color:var(--mainWhite) !important;
+}
+
+.cart-icon{
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--mainComplementary);
+}
+.btn-clear-cart {
+  border: 3px solid var(--mainPink);
+  color: var(--mainPink);
+  background-color: transparent;
+  width: 100px;
+  height: 40px;
+  padding: 3px;
+  font-weight: 700;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.btn-clear-cart:hover {
+  border: 3px solid var(--mainPink);
+  color: var(--mainWhite);
+  background: var(--mainPink);
+  width: 100px;
+  height: 40px;
+  padding: 3px;
+  font-weight: 700;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.container, .container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  
+}
+
+
+.col-10 {
+  -ms-flex: 0 0 83.333333%;
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+  margin: 2px;
+  text-align: right;
+  text-transform: capitalize;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.mx-1 {
+  margin-right: 0.25rem !important;
+}
+
+/* .number {
+  margin: 10px;
+  color: var(--mainBlack);
+}
+.number:hover {
+  margin: 10px;
+  background: var(--mainBlack) !important;
+  color:var(--mainWhite) !important;
+} */
+
+.container-cart {
+  background: var(--mainGrey);
+  margin: 10px;
+  color: var(--mainBlack);
+}
+
+
