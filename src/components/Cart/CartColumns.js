@@ -6,7 +6,7 @@ export default function CartColumns() {
     
     return (
        
-        <div className="container-cart d-sm-none">
+        <div className="container-cart">
             <div className="row">
                 <div className="col-10 mx-auto col-lg-2 ">
                     <p>PHOTOS</p>
