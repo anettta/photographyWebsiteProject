@@ -178,7 +178,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   font-family: Georgia, Times, 'Times New Roman', serif;
-  
+  align-items: center;
   font-size: 1.5rem;
   font-weight: 600;
   
@@ -195,7 +195,7 @@ h6 {
 }
 .nav-icon {
   font-size: 1.5rem;
-  color: var(--primaryColor);
+  color: var(--mainBlack);
   width: 40px;
 
 }
@@ -641,6 +641,7 @@ h6 {
   .d-sm-none {
     display: none !important;
   }
+
 }
 /* end of rooms fitler*/
 .btn-black {
@@ -738,6 +739,7 @@ h6 {
   background: var(--mainGrey);
   margin: 10px;
   color: var(--mainBlack);
+  
 }
 
 .btn-arrow {
