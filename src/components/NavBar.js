@@ -22,7 +22,7 @@ export default class NavBar extends Component {
                  
 {                    
                    <Link to="/">
-                       <img src={logo} alt="logo image"/>
+                       <img src={logo} alt=""/>
                     
                         
                     

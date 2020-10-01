@@ -19,7 +19,7 @@ export default function Room({room}) {
         <article className="room">
             <div className="img-container">
            
-                <img src={images[0] || defaultImg} alt="single image" />
+                <img src={images[0] || defaultImg} alt="" />
                 <div className="price-top">
                     <h6>${price}</h6>
                     <p>per print</p>
