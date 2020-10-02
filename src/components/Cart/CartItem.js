@@ -9,7 +9,7 @@ export default function CartItem({item,value}) {
     return (
        <div class="container-fluid">
         <div className="row">
-            <div className="col-10 mx-auto col-lg-2">
+            <div className="cart-headings">
                 <img 
                 src={images}
                 style={{width: "5rem", height: "5rem"}}
@@ -17,19 +17,19 @@ export default function CartItem({item,value}) {
                 alt="chosen photograph"
                 />
             </div>
-            <div className="col-10 mx-auto col-lg-2">
+            <div className="cart-headings">
                 <span className="d-lg-none">
                     photo:
                 </span> {name}
 
             </div>
-            <div className="col-10 mx-auto col-lg-2">
+            <div className="cart-headings">
                 <span className="d-lg-none">
                     price:
                 </span> ${price}
 
             </div>
-            <div className="col-10 mx-auto col-lg-2 my-2 my-lg-0">
+            <div className="cart-headings">
                 <div className="d-flex justify-content-center">
                     <div className="btn-black">
                         <FaMinus 
@@ -47,13 +47,13 @@ export default function CartItem({item,value}) {
                     </div>
                 </div>
             </div>
-            <div className="col-10 mx-auto col-lg-2">
+            <div className="cart-headings">
                 <div className="cart-icon" 
                 onClick={()=>removeItem(name)}>
                     <FaTrash />
                 </div>
             </div>
-            <div className="col-10 mx-auto col-lg-2">
+            <div className="cart-headings">
                 <strong>Total : $ {total}</strong>
             </div>
         </div>

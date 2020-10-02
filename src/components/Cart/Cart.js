@@ -6,6 +6,7 @@ import {RoomConsumer} from '../../context';
 import CartList from './CartList';
 import CartTotals from './CartTotals';
 
+
 export default class Cart extends Component {
     render() {
         return (
@@ -17,11 +18,13 @@ export default class Cart extends Component {
         if (cart.length>0){
             return (
                 <React.Fragment>
+                   
                  <Title title="In Your Cart"/>
                 <CartColumns />
                 <br />
                 <CartList value={value}/>
                 <CartTotals value={value} history={this.props.history}/>
+               
                 </React.Fragment>
             );
         } else {

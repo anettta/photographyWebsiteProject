@@ -712,13 +712,17 @@ h6 {
 }
 
 .row {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
+  /* display: -ms-flexbox;
+  -ms-flex-wrap: wrap; */
+ 
+  margin-right: 15px;
+  margin-left: 15px;
+  display: flex; 
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
   text-align: center;
+  align-items:center;
+  padding: 10px;
+  justify-content: space-between;
   text-transform: capitalize;
 }
 .mx-1 {
@@ -739,7 +743,8 @@ h6 {
   background: var(--mainGrey);
   margin: 10px;
   color: var(--mainBlack);
-  
+  display: flex;
+  justify-content: center;
 }
 
 .btn-arrow {
@@ -747,4 +752,14 @@ h6 {
   color: var(--mainComplementary);
   width: 40px;
   padding: 10px;
+}
+
+.cart-headings {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  width: 220px;
+
 }

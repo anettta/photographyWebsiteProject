@@ -1,39 +1,45 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap-grid.css';
+import { useMediaQuery } from 'react-responsive';
+
+
 
 
 export default function CartColumns() {
     
     return (
-       
         <div className="container-cart">
+           
             <div className="row">
-                <div className="col-10 mx-auto col-lg-2 ">
+            <Desktop>
+                <div className="cart-headings">
                     <p>PHOTOS</p>
                 </div>
-                <div className="col-10 mx-auto col-lg-2">
+                <div className="cart-headings">
                     <p>TITLE</p>
                 </div>
-                <div className="col-10 mx-auto col-lg-2">
+                <div className="cart-headings">
                     <p>PRICE</p>
                 </div>
-                <div className="col-10 mx-auto col-lg-2">
+                <div className="cart-headings">
                     <p>QTY</p>
                 </div>
-                <div className="col-10 mx-auto col-lg-2">
+                <div className="cart-headings" >
                     <p>REMOVE</p>
                 </div>
-                <div className="col-10 mx-auto col-lg-2">
+                <div className="cart-headings" >
                     <p>TOTAL</p>
                 </div>
-                
+                </Desktop>
             </div>
-            
         </div>
-      
     )
 };
 
 
 
-  
+
+ const Desktop = ({ children }) => {
+    const isDesktop = useMediaQuery({ minWidth: 992 })
+    return isDesktop ? children : null
+  }
+
