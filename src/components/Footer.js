@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {FaInstagram, FaFacebook, FaGithub} from  'react-icons/fa'
 import Title from './Title';
 
+
 export default class Services extends
 Component {
     state={
@@ -25,6 +26,7 @@ Component {
     }
     render() {
         return (
+           
             <section className="services">
                <Title title='CONNECT' />
                <div className="services-center">
@@ -43,6 +45,7 @@ Component {
                </div>
 
             </section>
+           
         )
     }
 }
