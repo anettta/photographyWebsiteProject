@@ -20,7 +20,7 @@ export default function CartItem({item,value}) {
             <div className="cart-headings">
                 <span className="d-lg-none">
                     photo:
-                </span> {name +  " " +  "11 x 14"}
+                </span> {name} 11 x 14
 
             </div>
             <div className="cart-headings">
