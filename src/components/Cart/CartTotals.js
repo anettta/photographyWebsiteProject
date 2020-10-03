@@ -1,13 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import PayPalButton from './PayPalButton';
-import { useMediaQuery } from 'react-responsive';
+
 
 export default function CartTotals({value,history}) {
     const {cartSubTotal, cartTax, cartTotal, clearCart} = value;
 
     return <React.Fragment>
-        <Desktop>
+  
         <div class="container">
             <div class="row">
                 <div className="col-10">
@@ -40,10 +40,6 @@ export default function CartTotals({value,history}) {
                 </div>
             </div>
         </div>
-        </Desktop>
+  
     </React.Fragment>;
 }
-const Desktop = ({ children }) => {
-    const isDesktop = useMediaQuery({ minWidth: 392 })
-    return isDesktop ? children : null
-  }
