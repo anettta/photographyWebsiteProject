@@ -11,16 +11,16 @@ import Footer from './components/Footer';
 import Cart from  './components/Cart';
 import Modal from './components/Modal';
 
-function initializeReactGA() {
-  ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS);
-  ReactGA.pageview('/');
-  ReactGA.pageview('/rooms');
-  ReactGA.pageview('/cart');
-  ReactGA.pageview('/rooms/:slug');
-}
 
 
 function App() {
+  function initializeReactGA() {
+    ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS);
+    ReactGA.pageview('/');
+    ReactGA.pageview('/rooms');
+    ReactGA.pageview('/cart');
+    ReactGA.pageview('/rooms/:slug');
+  }
   
   return (
     
@@ -45,3 +45,4 @@ function App() {
 }
 
 export default App;
+
