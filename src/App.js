@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga';
 import React from 'react';
 import './App.css';
 import Home from './pages/home';
@@ -10,8 +11,19 @@ import Footer from './components/Footer';
 import Cart from  './components/Cart';
 import Modal from './components/Modal';
 
+function initializeReactGA() {
+  ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS);
+  ReactGA.pageview('/');
+  ReactGA.pageview('/rooms');
+  ReactGA.pageview('/cart');
+  ReactGA.pageview('/rooms/:slug');
+}
+
+
 function App() {
+  
   return (
+    
 <>
 <NavBar />
 
