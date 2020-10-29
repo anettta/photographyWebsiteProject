@@ -8,13 +8,13 @@ export default function CartTotals({value,history}) {
 
     return <React.Fragment>
   
-        <div class="container">
+        <div class="room-info">
             <div class="row">
                 <div className="col-10">
                     <Link to="/">
                         <button className="btn-clear-cart" type="button"
                         onClick={()=>clearCart()}>clear cart</button>
-                          <br />
+                         
                     </Link>
                   
                     <h5>

@@ -7,20 +7,20 @@ export default function CartItem({item,value}) {
     const {name, images, price, total, count} = item;
     const {increment, decrement, removeItem} = value;
     return (
-       <div class="container-fluid">
+       <div class="modal-view2">
         <div className="row">
             <div className="cart-headings">
                 <img 
                 src={images}
                 style={{width: "5rem", height: "5rem"}}
-                className="img-fluid"
+                className="img-in-modal-view"
                 alt="chosen photograph"
                 />
             </div>
             <div className="cart-headings">
                 <span className="d-lg-none">
                     photo:
-                </span> {name} 11 x 14
+                </span> {name} 
 
             </div>
             <div className="cart-headings">
