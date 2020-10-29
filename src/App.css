@@ -93,8 +93,8 @@ h6 {
   display: inline-block;
   text-decoration: none;
   letter-spacing: var(--mainSpacing);
-  color: var(--mainBlack);
-  background: var(--mainComplementary);
+  color: #edfffc;
+  background: #aec58f;
   padding: 0.4rem 0.9rem;
   border: 3px solid var(--mainWhite);
   transition: var(--mainTransition);
@@ -414,17 +414,22 @@ h6 {
 .img-in-modal-view {
   max-width: 100%;
   width: 500px;
-  padding: 30px;
+  padding: 10px;
 }
 
 
 
 .confirm-modal-text {
-  color: var(--mainGreen);
+  /* background-color: #8ab452; */
+  color: #8ab452;
+ 
+font-size: 14px;
+text-transform: uppercase;
+
 }
 
 .modal-view {
-  padding: 50px;
+  padding: 20px;
   text-align: center;
   text-transform: capitalize;
   width: 700px;
