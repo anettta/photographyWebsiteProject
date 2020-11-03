@@ -12,7 +12,7 @@ export default function CartItem({item,value}) {
             <div className="text-title">
                 <img 
                 src={images}
-                style={{width: "12rem", height: "12rem",
+                style={{width: "17rem", height: "17rem",
                 float: "left",textAlign:"center", margin: 10}}
                 className=""
                 alt="chosen photograph"
