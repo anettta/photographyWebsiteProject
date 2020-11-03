@@ -7,11 +7,11 @@ import { useMediaQuery } from 'react-responsive';
 export default function CartColumns() {
     
     return (
-        <div className="container-cart">
+        <div className="room-info">
            
             <div className="row">
             <Desktop>
-                <div className="cart-headings">
+                <div className="text-info">
                     <p>PHOTOS</p>
                 </div>
                 <div className="cart-headings">

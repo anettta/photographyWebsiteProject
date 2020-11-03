@@ -29,7 +29,7 @@ Component {
            
             <section className="services">
                <Title title='CONNECT' />
-               <div className="services-center">
+               <div className="copyright">
                    {this.state.footer.map((item, index) => {
                        return <article key={index} className="service">
                            <span >{item.icon}</span>
@@ -40,7 +40,7 @@ Component {
                    })}
 
                </div>
-               <div className="services-center">
+               <div className="copyright">
                    &copy; Anna G. Photography. All rights reserved. Unauthorized use prohibited.
                </div>
 

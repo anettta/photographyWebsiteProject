@@ -8,7 +8,7 @@ export default function CartTotals({value,history}) {
 
     return <React.Fragment>
   
-        <div class="room-info">
+        <div class="services-center">
             <div class="row">
                 <div className="col-10">
                     <Link to="/">
