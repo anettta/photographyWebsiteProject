@@ -7,6 +7,7 @@ import RoomsContainer from "../components/RoomsContainer";
 export default function rooms() {
     return (
         <>
+
        <Hero hero="roomsHero">
            <Banner title="Gallery">
                <Link to='/' className="btn-primary">

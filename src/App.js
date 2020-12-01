@@ -17,9 +17,9 @@ function App() {
  
     ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS);
     ReactGA.pageview('/');
-    ReactGA.pageview('/rooms');
+    ReactGA.pageview('/gallery');
     ReactGA.pageview('/cart');
-    ReactGA.pageview('/rooms/:slug');
+    ReactGA.pageview('/gallery/:slug');
   
   
   return (
@@ -29,9 +29,9 @@ function App() {
 
 <Switch>
 <Route exact path="/" component={Home} />
-<Route exact path="/rooms/" component={Gallery} />
+<Route exact path="/gallery/" component={Gallery} />
 <Route exact path="/cart/" component={Cart} />
-<Route exact path="/rooms/:slug" component={Photograph} />
+<Route exact path="/gallery/:slug" component={Photograph} />
 
 <Route component={Error} />
 
