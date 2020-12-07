@@ -32,7 +32,7 @@ export default class SingleRoom extends Component {
            
             <div className="error">
               <h3> no such photo could be found...</h3>
-              <Link to="/gallery" className="btn-primary">
+              <Link to="/rooms" className="btn-primary">
                 back to gallery
               </Link>
             </div>

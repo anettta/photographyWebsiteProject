@@ -783,6 +783,7 @@ h6 {
   background: var(--darkGrey);
   text-align: center;
   color: var(--mainBlack);
+  margin: 2rem;
 }
 
 .quotes {
