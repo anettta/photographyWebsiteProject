@@ -779,16 +779,19 @@ h6 {
 #text {
   color: var(--mainBlack);
   display: flex;
-  width: 400px;
-  margin: 20px;
+  width: 300px;
+  margin: 30px;
 }
 
 .quotesSection {
   padding: 1rem;
   text-align: center;
   color: var(--mainBlack);
-  width: 500px;
-  display: inline;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: lightgray;
 }
 
 .quotes {

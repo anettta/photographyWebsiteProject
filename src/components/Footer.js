@@ -28,11 +28,14 @@ Component {
         return (
            
             <section className="footer">
+               
+                     
                <Title title='CONNECT' />
                <div className="copyright">
                    {this.state.footer.map((item, index) => {
                        return <article key={index} className="service">
                            <span >{item.icon}</span>
+                
                          
                            
                        </article>
@@ -43,7 +46,7 @@ Component {
                <div className="copyright">
                    &copy; Anna G. Photography. All rights reserved. Unauthorized use prohibited.
                </div>
-
+   
             </section>
            
         )
