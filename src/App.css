@@ -776,6 +776,7 @@ h6 {
   color: var(--mainBlack);
   display: flex;
   width: 400px;
+  margin: 20px;
 }
 
 .quotesSection {
@@ -783,7 +784,7 @@ h6 {
   background: var(--darkGrey);
   text-align: center;
   color: var(--mainBlack);
-  margin: 2rem;
+  width: 500px;
 }
 
 .quotes {
