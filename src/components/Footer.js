@@ -27,7 +27,7 @@ Component {
     render() {
         return (
            
-            <section className="services">
+            <section className="footer">
                <Title title='CONNECT' />
                <div className="copyright">
                    {this.state.footer.map((item, index) => {
