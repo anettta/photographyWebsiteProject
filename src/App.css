@@ -29,7 +29,6 @@ body {
 
 .logo {
   width: 40px;
-
 }
 h1 {
   font-size: 3em;
@@ -86,7 +85,6 @@ h6 {
   text-transform: uppercase;
   cursor: pointer;
   justify-content: space-evenly;
-
 }
 
 .btn-primary-detailed-2 {
@@ -101,9 +99,7 @@ h6 {
   text-transform: uppercase;
   cursor: pointer;
   justify-content: space-evenly;
-
 }
-
 
 .btn-primary:hover {
   background: transparent;
@@ -143,8 +139,6 @@ h6 {
   cursor: pointer;
 }
 
-
-
 .loading {
   text-transform: capitalize;
   text-align: center;
@@ -174,30 +168,24 @@ h6 {
   z-index: 1;
 }
 .nav-header {
- 
   display: flex;
   justify-content: space-between;
-  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-family: Georgia, Times, "Times New Roman", serif;
   align-items: center;
   font-size: 1.5rem;
   font-weight: 600;
-  
- 
 }
-
 
 .nav-btn {
   background: transparent;
   border: none;
   cursor: pointer;
   outline: none;
- 
 }
 .nav-icon {
   font-size: 1.5rem;
   color: var(--mainBlack);
   width: 40px;
-
 }
 .nav-links {
   height: 0;
@@ -232,7 +220,7 @@ h6 {
     margin: 0 auto;
     display: flex;
   }
-  .nav-links{
+  .nav-links {
     height: auto;
     display: flex;
     margin-left: 4rem;
@@ -317,7 +305,6 @@ h6 {
 }
 /* end of Title */
 
-
 /* services */
 .services {
   padding: 5rem 0;
@@ -325,7 +312,6 @@ h6 {
 .services {
   background: var(--darkGrey);
   text-align: center;
- 
 }
 .services-center {
   width: 90vw;
@@ -352,10 +338,10 @@ h6 {
   margin-bottom: 1.5rem;
 }
 
-.service  a{
+.service a {
   display: flex;
   color: var(--primaryColor);
-  font-size:1.5rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 .services h6 {
@@ -427,15 +413,12 @@ h6 {
   padding: 10px;
 }
 
-
-
 .confirm-modal-text {
   /* background-color: #8ab452; */
   color: #8ab452;
- 
-font-size: 14px;
-text-transform: uppercase;
 
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 .modal-view {
@@ -445,24 +428,19 @@ text-transform: uppercase;
   width: 700px;
   box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
-
 }
 .modal-view2 {
-  
   text-align: center;
   text-transform: capitalize;
   width: 100%;
 
   transition: var(--mainTransition);
-
 }
 
 .img-container img {
   width: 100%;
   display: block;
   transition: var(--mainTransition);
- 
-  
 }
 .price-top {
   position: absolute;
@@ -666,7 +644,6 @@ text-transform: uppercase;
   .d-sm-none {
     display: none !important;
   }
-
 }
 /* end of rooms fitler*/
 .btn-black {
@@ -684,10 +661,10 @@ text-transform: uppercase;
 
 .btn-black:hover {
   background: var(--mainBlack) !important;
-  color:var(--mainWhite) !important;
+  color: var(--mainWhite) !important;
 }
 
-.cart-icon{
+.cart-icon {
   cursor: pointer;
   font-size: 1.2rem;
   color: var(--mainComplementary);
@@ -717,16 +694,15 @@ text-transform: uppercase;
   text-transform: uppercase;
 }
 
-.container, .container-fluid {
+.container,
+.container-fluid {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
-  
 }
-
 
 .col-10 {
   -ms-flex: 0 0 83.333333%;
@@ -740,13 +716,13 @@ text-transform: uppercase;
 .row {
   /* display: -ms-flexbox;
   -ms-flex-wrap: wrap; */
- 
+
   margin-right: 15px;
   margin-left: 15px;
-  display: flex; 
+  display: flex;
   flex-wrap: wrap;
   text-align: center;
-  align-items:center;
+  align-items: center;
   padding: 10px;
   justify-content: space-between;
   text-transform: capitalize;
@@ -787,5 +763,59 @@ text-transform: uppercase;
   align-items: center;
   max-width: 100%;
   width: 200px;
-color: var(--mainBlack);
+  color: var(--mainBlack);
+}
+
+#quote {
+  color: var(--primaryColor);
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+#text {
+  color: var(--mainBlack);
+  display: flex;
+  width: 400px;
+}
+
+.quotesSection {
+  padding: 1rem;
+  background: var(--darkGrey);
+  text-align: center;
+  color: var(--mainBlack);
+}
+
+.quotes {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#source {
+  color: var(--mainBlack);
+  opacity: 0.7;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.prev-btn,
+.next-btn {
+  padding: 0.5rem;
+  border-radius: 0.1rem;
+  margin: 0.3rem;
+  background-color: var(--mainWhite);
+  color: var(--primaryColor);
+  border: groove 0.1rem var(--primaryColor);
+}
+
+.random-btn {
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  margin: 1rem;
+  color: var(--primaryColor);
+  border: dotted 0.2rem var(--primaryColor);
+  background-color: var(--mainWhite);
 }

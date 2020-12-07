@@ -1,73 +1,73 @@
-import React, { Component } from 'react';
-import {FaQuoteRight} from  'react-icons/fa'
-// import {FaChevronLeft} from  'react-icons/fa'
-// import {FaChevronRight} from  'react-icons/fa'
-//FaBlackTie, FaPhotoVideo, FaNature
-// import Title from './Title';
-export default class Services extends
-Component {
-    state={
-        services: [
-            {
-                icon:<FaQuoteRight/>,
-                author: "Ansel Adams",
-                quote: "You don’t make a photograph just with a camera. You bring to the act of photography all the pictures you have seen, the books you have read, the music you have heard, the people you have loved."
-            }
-            // { icon:<FaQuoteRight/>,
-            //     author: "Ansel Adams",
-            //     quote: "When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence."
-            // },
-            // { icon:<FaQuoteRight/>,
-            //     author: "Scott Lorenzo",
-            //     quote: "The picture that you took with your camera is the imagination you want to create with reality."
-            // },
-            // { icon:<FaQuoteRight/>,
-            //     author: "James Lalropui Keivom",
-            //     quote: "It’s weird that photographers spend years or even a whole lifetime, trying to capture moments that added together, don’t even amount to a couple of hours."
-            // },
-            // { icon:<FaQuoteRight/>,
-            //     author: "C.S. Lewis",
-            //     quote: "If we find ourselves with a desire that nothing in this world can satisfy, the most probable explanation is that we were made for another world."
-            // }
+import React, {useState} from 'react';
+import tips from '../components/data';
+import Title from './Title';
+import { FaChevronLeft, FaChevronRight, FaQuoteRight} from 'react-icons/fa';
 
-            // },
-           
-            // {
-            //     icon:<FaBlackTie/>,
-            //     title: "Portraits",
-            //     info: 'Professional portraits for LinkedIn'
-            // },
-            // {
-            //     icon:<FaPhotoVideo/>,
-            //     title: "Custom",
-            //     info: 'Personalized photoshoot'
-            // }
+const Services = () => {
+    const [index, setIndex] = useState(0);
+    const {source, text} = tips[index];
 
-        ]
+    const checkNumber = (number) => {
+        if (number > tips.length-1) {
+            return 0;
+        } 
+        if (number < 0) {
+            return tips.length-1;
+        }
+        return number;
     }
-    render() {
-       
-        return (
+
+    const nextTip = () => {
+        setIndex((index) => {
+            let newIndex = index + 1;
+            return checkNumber(newIndex);
+        });
+    };
+
+    const prevTip = () => {
+        setIndex((index) => {
+            let newIndex = index - 1;
+            return checkNumber(newIndex);
+        });
+    };
+    const random = () => {
+        let random = Math.floor(Math.random() * tips.length);
+        if (random === index){
+            random = index + 1;
+        }
+
+        setIndex(checkNumber(random));
+
+    }
+
+    return (
+        <section className="quotesSection">
+              <Title title="#LeaveNoTrace" />
+            <div className="quotes">
+              
+              <article>
+                      <FaQuoteRight id="quote"/>
+                         <quote id="text">{text}</quote>
+                            <caption id="source">{source}</caption>
+
+                         <div className="button-container">
+                               <button className="prev-btn" onClick={prevTip}>
+                                     <FaChevronLeft />
+                               </button>
+                               <button className="next-btn"onClick={nextTip}>
+                                     <FaChevronRight />
+                               </button>
+                              
+                           </div>
+                           <button className="random-btn" onClick={random}>surprise me</button>
+    
+     </article> 
             
-            <section className="services">
-               {/* <Title title='services' /> */}
-               <div className="services-center">
+            </div>
+        </section>
+    )
 
 
-                   {this.state.services.map((item, index) => {
-                       return <article key={index} className="service">
-                           <span>{item.icon}</span>
-                           <h6>{item.author}</h6>
-                           <p>{item.quote}</p>
-                           <br />
-                       </article>
-                      
-
-                   })}
-
-               </div>
-
-            </section>
-        )
-    }
 }
+
+export default Services;
