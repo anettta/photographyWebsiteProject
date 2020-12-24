@@ -32,7 +32,7 @@ export default class SingleRoom extends Component {
            
             <div className="error">
               <h3> no such photo could be found...</h3>
-              <Link to="/rooms" className="btn-primary">
+              <Link to='/rooms' className="btn-primary">
                 back to gallery
               </Link>
             </div>
@@ -58,7 +58,7 @@ export default class SingleRoom extends Component {
           <>
             <StyledHero img={images[0] || this.state.defaultBcg}>
               <Banner title={`${name}`}>
-                <Link to="/gallery" className="btn-primary">
+                <Link to='/rooms' className="btn-primary">
                   back to gallery
                 </Link>
               </Banner>
@@ -86,7 +86,7 @@ export default class SingleRoom extends Component {
                   <h6>{canvas && "printed on canvas"}</h6> */}
                   <div>
                     <div>
-                    <Link to='/'>
+                    <Link to='/rooms'>
                       <button className="btn-primary-detailed">
                         Back to Gallery
                       </button>
