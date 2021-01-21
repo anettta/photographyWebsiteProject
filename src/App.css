@@ -69,6 +69,7 @@ h6 {
   color: var(--mainBlack);
   background: var(--primaryColor);
   padding: 0.4rem 0.9rem;
+  opacity: 0.7;
   border: 3px solid var(--primaryColor);
   transition: var(--mainTransition);
   text-transform: uppercase;
@@ -104,8 +105,10 @@ h6 {
 }
 
 .btn-primary:hover {
-  background: transparent;
+  background: var(--mainWhite);
+  opacity: 0.7;
   color: var(--primaryColor);
+  border: 3px solid var(--primaryColor);
 }
 
 .btn-primary-detailed:hover {
@@ -169,6 +172,7 @@ h6 {
   background: var(--offWhite);
   z-index: 1;
 }
+
 .nav-header {
   display: flex;
   justify-content: space-between;
@@ -189,12 +193,26 @@ h6 {
   color: var(--mainBlack);
   width: 40px;
 }
+.nav-icon:hover {
+  color: var(--primaryColor);
+  transition-duration: 2s;
+  transition-timing-function: linear;
+}
+
 .nav-links {
   height: 0;
   overflow: hidden;
   transition: var(--mainTransition);
   list-style-type: none;
 }
+
+.social {
+  display: flex;
+  align-items: center;
+  border: dotted var(--primaryColor) 0.1rem;
+  margin-left: 35rem;
+}
+
 .nav-links a {
   display: block;
   text-decoration: none;
@@ -242,6 +260,11 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-attachment: fixed;
+  animation-name: zoom;
+  animation-duration: 20s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
 }
 .roomsHero {
   background-image: url("./images/galleryBcg.jpf");
@@ -251,7 +274,7 @@ h6 {
 /* Banner */
 .banner {
   display: inline-block;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
   color: var(--mainWhite);
   padding: 2rem 1rem;
   text-align: center;
@@ -271,6 +294,18 @@ h6 {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @media screen and (min-width: 576px) {
   .banner {
     padding: 2rem 3rem;
@@ -287,6 +322,7 @@ h6 {
     font-size: 4rem;
   }
 }
+
 /* End of Banner */
 /* Title */
 .section-title {

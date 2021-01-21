@@ -42,7 +42,7 @@ const Services = () => {
 
     return (
         <section className="quotesSection">
-              <Title title="#LeaveNoTrace" />
+              
             <div className="quotes">
               
               <article>

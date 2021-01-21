@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
 import logo from '../images/logo.jpf'
-import {FaAlignRight} from 'react-icons/fa'
+import {FaBars, FaGit} from 'react-icons/fa'
 import {FaLuggageCart} from 'react-icons/fa'
+import {FaFacebook} from 'react-icons/fa'
+import {FaInstagram} from 'react-icons/fa'
+import {FaGithub} from 'react-icons/fa'
+import {FaLinkedin} from 'react-icons/fa'
 import {Link} from 'react-router-dom'
 
 import {ButtonContainer} from "./Button";
@@ -29,7 +33,7 @@ export default class NavBar extends Component {
 </Link>}
                     
                     <button type="button" className="nav-btn" onClick={this.handleToggle}>
-                        <FaAlignRight className="nav-icon" />
+                        <FaBars className="nav-icon" />
                        
                     </button>
                 </div>
@@ -41,16 +45,22 @@ export default class NavBar extends Component {
                     <li>
                         <Link to="/rooms">Gallery</Link>
                     </li>
-                    
-                    
+
+                
+               
+                  
                    
                 </ul>
-                <Link to="/cart" className="ml-auto">
+               
+                 <Link to="/cart" className="ml-auto">
                     <ButtonContainer >
                         <span className="mr-2">
                         <FaLuggageCart /> my cart </span>
                     </ButtonContainer>
                 </Link>
+
+
+                
             </div>
            
         </nav>
