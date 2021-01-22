@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import logo from '../images/logo.jpf'
-import {FaBars, FaGit} from 'react-icons/fa'
+import {FaBars, FaLuggageCart} from 'react-icons/fa'
 import {Link} from 'react-router-dom'
 
 import {ButtonContainer} from "./Button";
