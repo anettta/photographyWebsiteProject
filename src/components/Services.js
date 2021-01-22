@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import tips from '../components/data';
-import Title from './Title';
 import { FaChevronLeft, FaChevronRight, FaQuoteRight} from 'react-icons/fa';
 
 const Services = () => {

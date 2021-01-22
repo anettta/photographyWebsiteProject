@@ -1,11 +1,6 @@
 import React, { Component } from 'react'
 import logo from '../images/logo.jpf'
 import {FaBars, FaGit} from 'react-icons/fa'
-import {FaLuggageCart} from 'react-icons/fa'
-import {FaFacebook} from 'react-icons/fa'
-import {FaInstagram} from 'react-icons/fa'
-import {FaGithub} from 'react-icons/fa'
-import {FaLinkedin} from 'react-icons/fa'
 import {Link} from 'react-router-dom'
 
 import {ButtonContainer} from "./Button";
